@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?grc format='1' created='3.7.10'?>
 <flow_graph>
-  <timestamp>Wed Nov 30 20:34:44 2016</timestamp>
+  <timestamp>Wed Jul 11 14:49:33 2012</timestamp>
   <block>
     <key>options</key>
     <param>
       <key>author</key>
-      <value></value>
+      <value>Greg Palmer</value>
     </param>
     <param>
       <key>window_size</key>
-      <value>1280,1024</value>
+      <value>1600, 650</value>
     </param>
     <param>
       <key>category</key>
-      <value>[GRC Hier Blocks]</value>
+      <value>Custom</value>
     </param>
     <param>
       <key>comment</key>
@@ -22,7 +22,7 @@
     </param>
     <param>
       <key>description</key>
-      <value></value>
+      <value>Working with the USRP!</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -30,7 +30,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 8)</value>
+      <value>(10, 10)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>top_block</value>
+      <value>WiFi_receiver</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -78,11 +78,11 @@
     </param>
     <param>
       <key>title</key>
-      <value></value>
+      <value>WiFi Receiver</value>
     </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>variable_text_box</key>
     <param>
       <key>comment</key>
       <value></value>
@@ -93,15 +93,19 @@
     </param>
     <param>
       <key>value</key>
-      <value>2.462e9</value>
+      <value>2462e6</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>True</value>
+    </param>
+    <param>
+      <key>formatter</key>
+      <value>None</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(216, 12)</value>
+      <value>(560, 28)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -117,27 +121,38 @@
     </param>
     <param>
       <key>label</key>
-      <value>freq</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>2.5e9</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>2.4e9</value>
+      <value></value>
     </param>
     <param>
       <key>notebook</key>
       <value></value>
     </param>
+  </block>
+  <block>
+    <key>variable</key>
     <param>
-      <key>num_steps</key>
-      <value>100</value>
+      <key>comment</key>
+      <value></value>
     </param>
     <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(328, 28)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>lpf_decim</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>20</value>
     </param>
   </block>
   <block>
@@ -156,11 +171,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(376, 12)</value>
+      <value>(696, 28)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -172,15 +187,15 @@
     </param>
     <param>
       <key>id</key>
-      <value>gain</value>
+      <value>rx_gain</value>
     </param>
     <param>
       <key>label</key>
-      <value>gain</value>
+      <value></value>
     </param>
     <param>
       <key>max</key>
-      <value>31.5</value>
+      <value>30</value>
     </param>
     <param>
       <key>min</key>
@@ -200,30 +215,50 @@
     </param>
   </block>
   <block>
-    <key>variable</key>
+    <key>variable_text_box</key>
     <param>
       <key>comment</key>
       <value></value>
+    </param>
+    <param>
+      <key>converver</key>
+      <value>float_converter</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>10e6</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
+      <key>formatter</key>
+      <value>None</value>
+    </param>
+    <param>
       <key>_coordinate</key>
-      <value>(8, 76)</value>
+      <value>(416, 28)</value>
     </param>
     <param>
       <key>_rotation</key>
       <value>0</value>
     </param>
     <param>
+      <key>grid_pos</key>
+      <value></value>
+    </param>
+    <param>
       <key>id</key>
       <value>samp_rate</value>
     </param>
     <param>
-      <key>value</key>
-      <value>20e6</value>
+      <key>label</key>
+      <value></value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value></value>
     </param>
   </block>
   <block>
@@ -242,11 +277,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(640, 420)</value>
+      <value>(328, 380)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -293,11 +328,11 @@
     </param>
     <param>
       <key>file</key>
-      <value>C:\Users\Matt\Desktop\Senior Design\gnuradio_output\movement_to_router_wait_then_walk3917.dat</value>
+      <value>C:\Users\Owner\Documents\Classes\ELEG498\Experiment Data\Experiment 4_30_17\step_in_front_thu_wall_4_30_17.dat</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(880, 516)</value>
+      <value>(232, 484)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -313,7 +348,7 @@
     </param>
     <param>
       <key>unbuffered</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
       <key>vlen</key>
@@ -336,11 +371,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(216, 420)</value>
+      <value>(272, 244)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -387,7 +422,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>fft_size</key>
@@ -399,7 +434,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(392, 388)</value>
+      <value>(96, 348)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -431,7 +466,7 @@
     </param>
     <param>
       <key>window</key>
-      <value></value>
+      <value>window.blackmanharris(1024)</value>
     </param>
   </block>
   <block>
@@ -446,11 +481,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(496, 4)</value>
+      <value>(848, 36)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -466,7 +501,7 @@
     </param>
     <param>
       <key>labels</key>
-      <value>['fft', 'waterfall']</value>
+      <value>['FFT', 'Waterfall']</value>
     </param>
     <param>
       <key>notebook</key>
@@ -489,7 +524,7 @@
     </param>
     <param>
       <key>bw0</key>
-      <value>20e6</value>
+      <value>0</value>
     </param>
     <param>
       <key>center_freq0</key>
@@ -509,7 +544,7 @@
     </param>
     <param>
       <key>gain0</key>
-      <value>gain</value>
+      <value>rx_gain</value>
     </param>
     <param>
       <key>lo_export0</key>
@@ -1649,7 +1684,7 @@
     </param>
     <param>
       <key>dev_addr</key>
-      <value>""</value>
+      <value></value>
     </param>
     <param>
       <key>dev_args</key>
@@ -1661,7 +1696,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(0, 244)</value>
+      <value>(24, 132)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1856,7 +1891,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(856, 64)</value>
+      <value>(848, 144)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1872,7 +1907,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value>notebook_0,0</value>
+      <value>notebook_0,1</value>
     </param>
     <param>
       <key>peak_hold</key>
@@ -1927,7 +1962,7 @@
     </param>
     <param>
       <key>average</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
       <key>baseband_freq</key>
@@ -1947,7 +1982,7 @@
     </param>
     <param>
       <key>dynamic_range</key>
-      <value>100</value>
+      <value>40</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -1959,7 +1994,7 @@
     </param>
     <param>
       <key>fft_size</key>
-      <value>512</value>
+      <value>1024</value>
     </param>
     <param>
       <key>freqvar</key>
@@ -1967,7 +2002,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(840, 272)</value>
+      <value>(848, 352)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1983,7 +2018,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value>notebook_0,1</value>
+      <value>notebook_0,0</value>
     </param>
     <param>
       <key>ref_scale</key>
@@ -1991,7 +2026,7 @@
     </param>
     <param>
       <key>ref_level</key>
-      <value>0</value>
+      <value>-60</value>
     </param>
     <param>
       <key>samp_rate</key>
